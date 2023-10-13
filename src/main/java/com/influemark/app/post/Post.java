@@ -44,6 +44,7 @@ public class Post {
     private Platform platform;
 
 
+    // Marketer
     @ManyToOne
     @JoinColumn(name = "marketer_id")
     private Marketer marketer;

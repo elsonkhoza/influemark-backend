@@ -30,7 +30,7 @@ public class Marketer {
     private String companyName;
     private String website;
 
-    @OneToMany(mappedBy = "marketer", orphanRemoval = true)
+    @OneToMany(mappedBy = "marketer")
     private List<Post> posts = new ArrayList<>();
 
 }
