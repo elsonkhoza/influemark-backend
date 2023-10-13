@@ -1,5 +1,6 @@
 package com.influemark.app.post;
 
+import com.influemark.app.platform.Platform;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +20,7 @@ public class Post {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name ="post_url", nullable = false)
     private String url;
 
     @Column(name = "comments")
@@ -29,6 +31,15 @@ public class Post {
     private int numberOfDays;
     @Column(name = "online")
     private boolean isOnline;
+
+    @Column(name = "approved")
+    private boolean isApproved;
     private boolean payed;
     private double cost;
+
+    // Platform relationship
+    @ManyToOne
+    @JoinColumn(name = "platform_id")
+    private Platform platform;
+
 }
