@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name = "influencer")
+@Table(name = "post")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
