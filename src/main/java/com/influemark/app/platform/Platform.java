@@ -1,5 +1,6 @@
 package com.influemark.app.platform;
 
+import com.influemark.app.influencer.Influencer;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,5 +23,9 @@ public class Platform {
     private String url;
     @Column(name = "followers")
     private int numberOfFollowers;
+
+    @ManyToOne
+    @JoinColumn(name = "influencer_id")
+    private Influencer influencer;
 
 }
