@@ -1,6 +1,7 @@
 package com.influemark.app.influencer.Location;
 
 
+import com.influemark.app.influencer.Influencer;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,5 +28,8 @@ public class Location {
     private String city;
     private String region;
     private String country;
+
+    @OneToOne(mappedBy = "location", orphanRemoval = true)
+    private Influencer influencer;
 
 }

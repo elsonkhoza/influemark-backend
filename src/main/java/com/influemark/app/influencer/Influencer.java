@@ -1,5 +1,6 @@
 package com.influemark.app.influencer;
 
+import com.influemark.app.influencer.Location.Location;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,5 +30,8 @@ public class Influencer {
     @Column(name = "profile_url")
     private String profileUrl;
 
+    @OneToOne(cascade = CascadeType.PERSIST, orphanRemoval = true)
+    @JoinColumn(name = "location_id")
+    private Location location;
 
 }
