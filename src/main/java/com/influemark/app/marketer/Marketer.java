@@ -1,10 +1,14 @@
 package com.influemark.app.marketer;
 
+import com.influemark.app.post.Post;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,5 +29,8 @@ public class Marketer {
     @Column(name = "company_name")
     private String companyName;
     private String website;
+
+    @OneToMany(mappedBy = "marketer", orphanRemoval = true)
+    private List<Post> posts = new ArrayList<>();
 
 }

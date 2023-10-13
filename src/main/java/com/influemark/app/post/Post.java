@@ -1,5 +1,6 @@
 package com.influemark.app.post;
 
+import com.influemark.app.marketer.Marketer;
 import com.influemark.app.platform.Platform;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -41,5 +42,10 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "platform_id")
     private Platform platform;
+
+
+    @ManyToOne
+    @JoinColumn(name = "marketer_id")
+    private Marketer marketer;
 
 }
