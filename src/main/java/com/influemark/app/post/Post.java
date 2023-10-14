@@ -43,7 +43,6 @@ public class Post {
     @JoinColumn(name = "platform_id")
     private Platform platform;
 
-
     // Marketer
     @ManyToOne
     @JoinColumn(name = "marketer_id")
