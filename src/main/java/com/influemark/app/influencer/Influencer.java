@@ -41,7 +41,6 @@ public class Influencer {
 
     // Platform Relationship
     @OneToMany(mappedBy = "influencer")
-    @OrderBy("order.followers")
     private List<Platform> platforms = new ArrayList<>();
 
 
