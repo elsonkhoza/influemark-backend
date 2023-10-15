@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class InfluencerUserDetailsService implements UserDetailsService {
-
     private final InfluencerRepository influencerRepository;
 
     @Override

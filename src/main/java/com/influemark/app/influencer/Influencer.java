@@ -37,6 +37,7 @@ public class Influencer implements UserDetails {
     private String website;
 
     // Todo: Add profile picture filed
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -50,7 +51,6 @@ public class Influencer implements UserDetails {
     // Influencer can have one or more social media platforms
     @OneToMany(mappedBy = "influencer")
     private List<Platform> platforms = new ArrayList<>();
-
 
     // Security User Details Methods
     @Override

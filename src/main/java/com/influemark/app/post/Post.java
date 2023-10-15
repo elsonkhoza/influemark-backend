@@ -21,7 +21,7 @@ public class Post {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name ="post_url", nullable = false)
+    @Column(name = "post_url", nullable = false)
     private String url;
 
     @Column(name = "comments")

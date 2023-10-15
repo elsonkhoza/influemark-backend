@@ -23,7 +23,7 @@ public class Marketer {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name ="marketer_name", nullable = false)
+    @Column(name = "marketer_name", nullable = false)
     private String name;
 
     @Column(name = "company_name")
