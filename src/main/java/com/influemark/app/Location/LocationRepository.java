@@ -1,4 +1,4 @@
-package com.influemark.app.influencer.Location;
+package com.influemark.app.Location;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
