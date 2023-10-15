@@ -1,4 +1,4 @@
-package com.influemark.app.influencer.Location;
+package com.influemark.app.Location;
 
 
 import com.influemark.app.influencer.Influencer;
