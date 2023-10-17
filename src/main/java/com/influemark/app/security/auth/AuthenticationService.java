@@ -55,8 +55,8 @@ public class AuthenticationService {
 
         // creating http headers
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add("access-token", jwtToken);
-        httpHeaders.add("refresh-token", refreshToken);
+        httpHeaders.add("access_token", jwtToken);
+        httpHeaders.add("refresh_token", refreshToken);
 
         // Send Email
         sendVerificationEmail(influencer);
@@ -86,8 +86,8 @@ public class AuthenticationService {
         createAndSaveInfluencerToken(influencer, jwtToken);
         // creating http headers
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add("access-token", jwtToken);
-        httpHeaders.add("refresh-token", refreshToken);
+        httpHeaders.add("access_token", jwtToken);
+        httpHeaders.add("refresh_token", refreshToken);
         // Response
         return new ResponseEntity<String>(httpHeaders, HttpStatus.OK);
 
@@ -177,8 +177,8 @@ public class AuthenticationService {
 
                 // creating http headers
                 HttpHeaders httpHeaders = new HttpHeaders();
-                httpHeaders.add("access-token", accessToken);
-                httpHeaders.add("refresh-token", refreshToken);
+                httpHeaders.add("access_token", accessToken);
+                httpHeaders.add("refresh_token", refreshToken);
                 // Response
                 ResponseEntity<String> responseEntity = new ResponseEntity<String>(httpHeaders, HttpStatus.OK);
 
